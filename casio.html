@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tunes!</title>
+	<script type="text/javascript" src="assets/js/paper-full.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/casio.css">
+
+	<script type="text/paperscript" canvas="myCanvas">
+	var keys = {
+		d: {
+			sound : new Howl({urls: ['sounds/a1.mp3']})
+			},
+	
+		r: {
+			sound : new Howl({urls: ['sounds/a1s.mp3']})
+			},
+		f: {
+			sound : new Howl({urls: ['sounds/b1.mp3']})
+			},
+		g: {
+			sound : new Howl({urls: ['sounds/c1.mp3']})
+			},
+		y: {
+			sound : new Howl({urls: ['sounds/c1s.mp3']})
+			},
+		h: {
+			sound : new Howl({urls: ['sounds/d1.mp3']})
+			},
+		u: {
+			sound : new Howl({urls: ['sounds/d1s.mp3']})
+			},
+		j: {
+			sound : new Howl({urls: ['sounds/e1.mp3']})
+			},
+		a: {
+			sound : new Howl({urls: ['sounds/f1.mp3']})
+			},
+		w: {
+			sound : new Howl({urls: ['sounds/f1s.mp3']})
+			},
+		s: {
+			sound : new Howl({urls: ['sounds/g1.mp3']})
+			},
+		e: {
+			sound : new Howl({urls: ['sounds/g1s.mp3']})
+			}
+		}
+		function onKeyDown(event)
+		{
+			if(keys[event.key])
+			{
+
+				keys[event.key].sound.play();
+				var text = new PointText(new Point(750,700));
+				text.justification = 'center';
+				text.fillColor = 'white';
+				text.fontSize = "20px";
+				text.content = 'A - f1  W - f#  S - g1 E - g# D - a1  R - a#  F - B  G - c1  Y - c#  H - d1 U - d# J - e1';
+				
+			}
+		}
+		//f1
+			var rectangle = new Rectangle(new Point(579, 300), new Point(629, 550));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = '#ffffff';
+		path.selected =false;
+		//g1
+			var rectangle = new Rectangle(new Point(631, 300), new Point(681, 550));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = '#ffffff';
+		path.selected = false;
+		//a1	
+			var rectangle = new Rectangle(new Point(683, 300), new Point(733, 550));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = '#ffffff';
+		path.selected = false;
+		//b2	
+			var rectangle = new Rectangle(new Point(735, 300), new Point(785, 550));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = '#ffffff';
+		path.selected = false;
+		//c1	
+			var rectangle = new Rectangle(new Point(787, 300), new Point(837, 550));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = '#ffffff';
+		path.selected = false;
+		//d1	
+			var rectangle = new Rectangle(new Point(839, 300), new Point(889, 550));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = '#ffffff';
+		path.selected = false;
+		//e1	
+			var rectangle = new Rectangle(new Point(891, 300), new Point(941, 550));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = '#ffffff';
+			path.border = "ffffff"
+		path.selected = false;
+		//f#	
+			var rectangle = new Rectangle(new Point(609, 300), new Point(649, 430));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = 'black';
+		path.selected = false;
+		//g#	
+			var rectangle = new Rectangle(new Point(661, 300), new Point(701, 430));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = 'black';
+		path.selected = false;
+		//a#	
+			var rectangle = new Rectangle(new Point(713, 300), new Point(753, 430));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = 'black';
+			path.border = "black";
+		path.selected = false;
+		//c#
+			var rectangle = new Rectangle(new Point(815, 300), new Point(855, 430));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = 'black';
+		path.selected = false;
+		//d#	
+			var rectangle = new Rectangle(new Point(867, 300), new Point(907, 430));
+			var cornerSize = new Size(5, 5);
+var path = new Path.RoundRectangle(rectangle, cornerSize);
+			path.fillColor = 'black';
+		path.selected = false;
+	</script>
+	
+</head>
+<body>
+
+<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
